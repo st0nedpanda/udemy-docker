@@ -3,7 +3,7 @@ service:
    - docker
 
 before_install:
-   - docker build -t firstciimage -f dockerfile.dev .
+   - docker build -t stonedpanda/firstciimage -f dockerfile.dev .
 
 script:
-   - docker run firstciimage npm run test -- --coverage
+   - docker run stonedpanda/firstciimage npm run test -- --coverage
