@@ -3,7 +3,7 @@ service:
    - docker
 
 before_install:
-   - docker build -t stonedpanda/firstciimage -f dockerfile.dev .
+   - docker build -t stonedpanda/udemy-images:part1 -f dockerfile.dev .
 
 script:
-   - docker run -e CI=true stonedpanda/firstciimage npm run test -- -- coverage
+   - docker run -e CI=true stonedpanda/udemy-images:part1 npm run test -- -- coverage
