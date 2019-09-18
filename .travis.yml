@@ -6,4 +6,4 @@ before_install:
    - docker build -t stonedpanda/firstciimage -f dockerfile.dev .
 
 script:
-   - docker run stonedpanda/firstciimage npm run test -- --coverage
+   - docker run stonedpanda/firstciimage npm run test -- -- coverage
